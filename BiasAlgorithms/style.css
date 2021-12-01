@@ -58,3 +58,13 @@
 .right {
     right: 0;
 }
+
+.center-float{
+    margin: 0 15% 10px;
+    overflow-x: hidden;
+    z-index: 1;
+    width: 70%;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}

@@ -34,6 +34,14 @@
 /* Main content */
 .main {
     margin-top: 150px; /* Add a top margin to avoid content overlay */
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .split {
@@ -67,4 +75,37 @@
     border-style: solid;
     border-color: black;
     border-width: 3px;
+}
+
+.section {
+    margin: 25px;
+    text-align: left;
+    font-size: large;
+}
+
+.section p{
+    text-indent: 4ch;
+    line-height: 1.5em;
+}
+
+.source_list li{
+    padding-bottom: 15px;
+}
+
+.source_list a:link{
+    color: goldenrod;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.source_list a:visited{
+    color: darkgoldenrod;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.source_list a:hover{
+    color: gold;
+    background-color: transparent;
+    text-decoration: underline;
 }

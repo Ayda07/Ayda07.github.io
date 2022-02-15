@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Euler Calculator</title>
+        <script src="https://unpkg.com/mathjs@10.1.1/lib/browser/math.js"></script>
+        <script type="module" src="./calc.js"></script>
+    </head>
+    <body>
+        <label for="diff_func">Differential Function (dy/dx): </label>
+        <input type="text" id="diff_func" name="diff_func">
+        <br>
+        <label for="delta_x">Delta x: </label>
+        <input type="number" id="delta_x" name="delta_x">
+        <br>
+        <label for="x_not">x zero: </label>
+        <input type="number" id="x_not" name="x_not">
+        <label for="y_not">y zero: </label>
+        <input type="number" id="y_not" name="y_not">
+        <br>
+        <label for="end">End x: </label>
+        <input type="number" id="end" name="end">
+        <br>
+        <button id="calc">Calculate</button>
+        <div id="answer">
+            
+        </div>
+    </body>
+</html>

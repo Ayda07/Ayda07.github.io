@@ -4,6 +4,39 @@
     margin-bottom: 10px;
     border-radius: 15px;
     border-style: ridge;
-    border-color: rgb(145, 7, 7);
-    max-width: 50%;
+}
+
+.enemy {
+    border-color: crimson;
+    text-decoration-color: crimson;
+}
+
+.enemy input {
+    color: crimson;
+    border-color: crimson;
+}
+
+.ally {
+    border-color: green;
+    text-decoration-color: green;
+}
+
+.ally input {
+    color: green;
+    border-color: green;
+}
+
+input[type=text] {
+    width: 100%;
+    white-space: nowrap;
+    border: none;
+    font-size: 30px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+input[type=number] {
+    border: none;
+    border-bottom: 2px solid;
+    margin-right: 20px;
 }

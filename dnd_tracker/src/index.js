@@ -8,7 +8,7 @@ const App = () => {
   const [creatures, setCreatures] = useState([]);
 
   const addCreature = useCallback(() => {
-    setCreatures((c) => [...c, { name: "NPC 1", type: "npc", init: 10, ac: 10, hp: 0 }])
+    setCreatures((c) => [...c, { name: "", type: "npc", init: 10, ac: 10, hp: 0 }])
   }, [creatures]);
   
   const update = () => {

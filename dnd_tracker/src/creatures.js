@@ -10,6 +10,10 @@ const Creatures = ({ creatures, addCreature, update }) => {
         update();   
     };
 
+    creatures.sort((a,b) => {
+        return a.init - b.init;
+    }).reverse();
+
     return(
         <>
             <h1>Combat Tracker</h1>
@@ -19,33 +23,40 @@ const Creatures = ({ creatures, addCreature, update }) => {
                         <input 
                             type="text"
                             name="name" 
-                            value={creature.name} 
+                            value={creature.name}
+                            placeholder="Creature Name..." 
                             onChange={(event) => handleChange(event, index)} 
-                        /><br />
-                        <label for="init">Initiative: </label>
-                        <input 
-                            type="number" 
-                            name="init"
-                            id="init"
-                            value={creature.init}
-                            onChange={event => handleChange(event, index)}
                         />
-                        <label for="ac">AC: </label>
-                        <input 
-                            type="number" 
-                            name="ac"
-                            id="ac"
-                            value={creature.ac}
-                            onChange={event => handleChange(event, index)}
-                        />
-                        <label for="hp">HP: </label>
-                        <input 
-                            type="number" 
-                            name="hp"
-                            id="hp"
-                            value={creature.hp}
-                            onChange={event => handleChange(event, index)}
-                        />
+                        <div className="statbox">
+                            <label for="init">Initiative</label><br />
+                            <input 
+                                type="number" 
+                                name="init"
+                                id="init"
+                                value={creature.init}
+                                onChange={event => handleChange(event, index)}
+                            />
+                        </div>
+                        <div className="statBox">
+                            <label for="ac">AC</label><br/>
+                            <input 
+                                type="number" 
+                                name="ac"
+                                id="ac"
+                                value={creature.ac}
+                                onChange={event => handleChange(event, index)}
+                            />
+                        </div>
+                        <div className="statBox">
+                            <label for="hp">HP</label><br/>
+                            <input 
+                                type="number" 
+                                name="hp"
+                                id="hp"
+                                value={creature.hp}
+                                onChange={event => handleChange(event, index)}
+                            />
+                        </div>
                         <select value={creature.type} onChange={event => handleChange(event, index)} name="type">
                             <option value="npc">Neutral</option>
                             <option value="ally">Ally</option>

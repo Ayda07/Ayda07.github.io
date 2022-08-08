@@ -6,6 +6,12 @@
     border-style: ridge;
 }
 
+.creature:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .enemy {
     border-color: crimson;
     text-decoration-color: crimson;
@@ -39,4 +45,26 @@ input[type=number] {
     border: none;
     border-bottom: 2px solid;
     margin-right: 20px;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.statBox {
+    float: left;
+    width: 15%;
+    padding: 15px;
 }
